@@ -63,7 +63,6 @@ void AProjectile::OnHit(UPrimitiveComponent * HitComp, AActor* OtherActor, UPrim
 		UGameplayStatics::ApplyDamage(OtherActor, Damage, MyInstigator, this, DamageTypeClass);
 		if (HitParticles)
 		{
-			//UGameplayStatics::PlaySoundAtLocation(this, HitSound, GetActorLocation());
 			UGameplayStatics::SpawnEmitterAtLocation(this, HitParticles, GetActorLocation(), GetActorRotation());
 		}
 		if (CameraShakeClass)
